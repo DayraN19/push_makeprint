@@ -1,0 +1,8 @@
+{
+	"files.associations": {
+		"libftprintf.h": "c",
+		"cstdint": "c",
+		"sigsegv.hpp": "c",
+		"sstream": "c"
+	}
+}
