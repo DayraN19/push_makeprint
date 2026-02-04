@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bastiangranier <bastiangranier@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 14:32:01 by bgranier          #+#    #+#             */
-/*   Updated: 2025/11/24 11:05:17 by bgranier         ###   ########.fr       */
+/*   Updated: 2026/02/04 10:27:35 by bastiangran      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int		ft_putchar(int c);
 int		ft_print_ptr(char *base, void *ptr, size_t len);
 int		ft_print_hex(unsigned int num, const char format);
 int		ft_printpercent(void);
-
+void	ftputchar_fd(char c);
 int		ft_putstr(char *str);
 int		ft_putnbr_base(char *base, int nbr, int len);
 int		ft_putnbr(int nbr);

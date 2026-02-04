@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bastiangranier <bastiangranier@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 15:10:08 by bgranier          #+#    #+#             */
-/*   Updated: 2026/02/03 12:57:18 by bgranier         ###   ########.fr       */
+/*   Updated: 2026/02/04 10:57:09 by bastiangran      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,5 +113,5 @@ void			sort_three(t_stack_node **a, t_ctrl *c);
 int				count_in_range(t_stack_node *a, int min, int max);
 int				get_max_index_pos(t_stack_node *b);
 void			push_back_to_a(t_stack_node **a, t_stack_node **b);
-
+int				print_disorder(t_stack_node *a);
 #endif

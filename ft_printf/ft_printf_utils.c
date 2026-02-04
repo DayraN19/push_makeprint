@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_utils.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bastiangranier <bastiangranier@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 14:42:32 by bgranier          #+#    #+#             */
-/*   Updated: 2025/11/20 16:42:59 by bgranier         ###   ########.fr       */
+/*   Updated: 2026/02/04 10:26:10 by bastiangran      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,10 +55,10 @@ int	ft_putstr(char *str)
 
 	i = 0;
 	if (!str)
-		return (write (1, "(null)", 6));
+		return (write (2, "(null)", 6));
 	while (str[i] != '\0')
 	{
-		write(1, &str[i], 1);
+		write(2, &str[i], 1);
 		i++;
 	}
 	return (i);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   disorder.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bastiangranier <bastiangranier@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 10:02:17 by bgranier          #+#    #+#             */
-/*   Updated: 2026/01/20 12:52:29 by bgranier         ###   ########.fr       */
+/*   Updated: 2026/02/04 11:00:21 by bastiangran      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,17 @@ float	compute_disorder(t_stack_node *a)
 	if (total == 0)
 		return (0.0f);
 	return ((float)bad / (float)total);
+}
+
+int	print_disorder(t_stack_node *a)
+{
+	double	disorderdouble;
+
+	(int)(disorderdouble);
+	disorderdouble = compute_disorder(a) * 10000;
+	ft_printf("Disorder: %.2f%%\n", disorderdouble / 100);
+	ft_printf(" %d.%d\n",
+		(int)(disorderdouble / 1000), (int)(disorderdouble % 100)
+		);
+	return (0);
 }

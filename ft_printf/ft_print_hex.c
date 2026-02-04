@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_hex.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bastiangranier <bastiangranier@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 14:40:36 by bgranier          #+#    #+#             */
-/*   Updated: 2025/11/21 12:13:18 by bgranier         ###   ########.fr       */
+/*   Updated: 2026/02/04 10:28:12 by bastiangran      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c)
 {
-	write(fd, &c, 1);
+	write(2, &c, 1);
 }
 
 int	ft_hex_len(unsigned	int num)
@@ -40,13 +40,13 @@ void	ft_put_hex(unsigned int num, const char format)
 	else
 	{
 		if (num <= 9)
-			ft_putchar_fd((num + '0'), 1);
+			ft_putchar_fd((num + '0'));
 		else
 		{
 			if (format == 'x')
-				ft_putchar_fd((num - 10 + 'a'), 1);
+				ft_putchar_fd((num - 10 + 'a'));
 			if (format == 'X')
-				ft_putchar_fd((num - 10 + 'A'), 1);
+				ft_putchar_fd((num - 10 + 'A'));
 		}
 	}
 }
@@ -54,7 +54,7 @@ void	ft_put_hex(unsigned int num, const char format)
 int	ft_print_hex(unsigned int num, const char format)
 {
 	if (num == 0)
-		return (write(1, "0", 1));
+		return (write(2, "0", 1));
 	else
 		ft_put_hex(num, format);
 	return (ft_hex_len(num));

@@ -3,20 +3,19 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+         #
+#    By: bastiangranier <bastiangranier@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/05 13:00:48 by bgranier          #+#    #+#              #
-#    Updated: 2026/02/03 13:00:57 by bgranier         ###   ########.fr        #
+#    Updated: 2026/02/04 10:37:42 by bastiangran      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME =	push_swap
+NAME = push_swap
 LIBFT_DIR = libft
 LIBFT = $(LIBFT_DIR)/libft.a
-FT_PRINTF_DIR = ft_printf
-FT_PRINTF = $(FT_PRINTF_DIR)/libftprintf.a
+FT_PRINTF = ft_printf/printf.a
 CC = cc
-CFLAGS = -Wall -Werror -Wextra -I . -I $(LIBFT_DIR) -I $(FT_PRINTF_DIR)
+CFLAGS = -Wall -Werror -Wextra -I . -I $(LIBFT_DIR) -I ft_printf
 
 SRC = push_swap.c \
 	init_stack.c \
@@ -51,19 +50,20 @@ $(LIBFT):
 	make -C $(LIBFT_DIR)
 
 $(FT_PRINTF):
-	make -C	$(FT_PRINTF_DIR)
+	make -C ft_printf
 
 $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) $(LIBFT) $(FT_PRINTF) -o $(NAME)
 
 clean:
-	rm -rf $(OBJ)
-	make clean -C $(LIBFT_DIR) 
-	make clean -C $(FT_PRINTF_DIR)
+	rm -f $(OBJ)
+	make clean -C $(LIBFT_DIR)
+	make clean -C ft_printf
 
 fclean: clean
-	rm -rf $(NAME) ./a.out gcc
-	make fclean -C $(LIBFT_DIR) $(FT_PRINTF_DIR)
+	rm -f $(NAME)
+	make fclean -C $(LIBFT_DIR)
+	make fclean -C ft_printf
 
 re: fclean all
 

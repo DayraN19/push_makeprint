@@ -3,37 +3,34 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+         #
+#    By: bastiangranier <bastiangranier@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/12 10:13:02 by bgranier          #+#    #+#              #
-#    Updated: 2025/11/20 15:11:31 by bgranier         ###   ########.fr        #
+#    Updated: 2026/02/03 15:24:29 by bastiangran      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME =	libftprintf.a
+NAME = printf.a
 CC = cc
 CFLAGS = -Wall -Werror -Wextra
 
-SRC = ft_print_hex.c \
-	ft_print_ptr.c \
-	ft_printf_utils.c \
-	ft_printf.c \
-
+SRC = ft_printf.c ft_printf_utils.c ft_print_hex.c ft_print_ptr.c
 OBJ = $(SRC:.c=.o)
+AR = ar rcs
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	ar rcs $(NAME) $(OBJ)
+	$(AR) $(NAME) $(OBJ)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -rf $(OBJ)
+	rm -f $(OBJ)
 
 fclean: clean
-	rm -rf $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
 
