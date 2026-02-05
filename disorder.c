@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   disorder.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bastiangranier <bastiangranier@student.    +#+  +:+       +#+        */
+/*   By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 10:02:17 by bgranier          #+#    #+#             */
-/*   Updated: 2026/02/05 12:48:44 by bastiangran      ###   ########.fr       */
+/*   Updated: 2026/02/05 14:06:03 by bgranier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,6 @@ void	print_disorder_point(int disorder)
 
 	integer_part = disorder / 100;
 	fraction_part = disorder % 100;
-
 	ft_putstr_fd("Initial disorder: ", 2);
 	ft_putnbr_fd(integer_part, 2);
 	ft_putstr_fd(".", 2);

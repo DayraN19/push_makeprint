@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: bastiangranier <bastiangranier@student.    +#+  +:+       +#+         #
+#    By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/05 13:00:48 by bgranier          #+#    #+#              #
-#    Updated: 2026/02/04 10:37:42 by bastiangran      ###   ########.fr        #
+#    Updated: 2026/02/05 13:41:48 by bgranier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 

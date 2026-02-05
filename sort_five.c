@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_five.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bastiangranier <bastiangranier@student.    +#+  +:+       +#+        */
+/*   By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 10:41:31 by bgranier          #+#    #+#             */
-/*   Updated: 2026/02/05 12:38:44 by bastiangran      ###   ########.fr       */
+/*   Updated: 2026/02/05 13:36:58 by bgranier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void	sort_5(t_stack_node **a, t_stack_node **b, t_ctrl *c)
 		pb(a, b, c);
 		size--;
 	}
-	sort_three(a, c);
+	sort_3(a, c);
 	while (*b)
 		pa(a, b, c);
 }

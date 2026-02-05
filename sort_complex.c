@@ -6,12 +6,12 @@
 /*   By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 13:22:57 by bgranier          #+#    #+#             */
-/*   Updated: 2026/01/20 13:23:52 by bgranier         ###   ########.fr       */
+/*   Updated: 2026/02/05 13:53:23 by bgranier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
+//sort three
 void	sort_complex(t_stack_node **a, t_stack_node **b, t_ctrl *c)
 {
 	int	max_bits;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_simple.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bastiangranier <bastiangranier@student.    +#+  +:+       +#+        */
+/*   By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 13:24:42 by bgranier          #+#    #+#             */
-/*   Updated: 2026/02/05 12:50:01 by bastiangran      ###   ########.fr       */
+/*   Updated: 2026/02/05 13:57:41 by bgranier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,36 +28,9 @@ void	sort_simple(t_stack_node **a, t_stack_node **b, t_ctrl *c)
 			sa(a, c);
 	}
 	else if (size == 3)
-		sort_three(a, c);
+		sort_3(a, c);
 	else
 		sort_5(a, b, c);
 	c->size_a = stack_size(*a);
 	c->size_b = stack_size(*b);
 }
-
-/* void	sort_simple(t_stack_node **a, t_stack_node **b, t_ctrl *c)
-{
-	int		size;
-	double	i;
-
-	size = stack_size(*a);
-	i = compute_disorder(*a);
-	if (size <= 1)
-	{
-		ft_printf("Stack is already sorted or empty. No sorting needed.\n");
-		return ;
-	}
-	if (i == 0)
-	{
-		return ;
-	}
-	while (*a)
-	{
-		move_min_to_top(a, c);
-		pb(a, b, c);
-	}
-	while (*b)
-	{
-		pa(a, b, c);
-	}
-} */

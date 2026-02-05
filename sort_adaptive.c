@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_adaptive.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bastiangranier <bastiangranier@student.    +#+  +:+       +#+        */
+/*   By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 13:17:22 by bgranier          #+#    #+#             */
-/*   Updated: 2026/02/05 12:50:50 by bastiangran      ###   ########.fr       */
+/*   Updated: 2026/02/05 14:11:29 by bgranier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,15 +31,15 @@ void	sort_adaptive(t_stack_node **a, t_stack_node **b, t_ctrl *c)
 {
 	if (!a || !*a || !c)
 		return ;
-
 	c->executed_strategy = choose_adaptive_strategy(*a, c);
+	if (stack_size(*a) <= 5)
+		c->executed_strategy = STRAT_SIMPLE;
 	if (c->executed_strategy == STRAT_SIMPLE)
 		sort_simple(a, b, c);
 	else if (c->executed_strategy == STRAT_MEDIUM)
 		sort_medium(a, b, c);
 	else
 		sort_complex(a, b, c);
-
 	c->size_a = stack_size(*a);
 	c->size_b = stack_size(*b);
 }

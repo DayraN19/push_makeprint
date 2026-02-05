@@ -6,7 +6,7 @@
 /*   By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 16:15:20 by bgranier          #+#    #+#             */
-/*   Updated: 2026/01/20 13:29:05 by bgranier         ###   ########.fr       */
+/*   Updated: 2026/02/05 13:38:20 by bgranier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,19 +37,4 @@ int	get_max(t_stack_node *a)
 		a = a->next;
 	}
 	return (max);
-}
-
-void	sort_3(t_stack_node **a, t_ctrl *c)
-{
-	int	max;
-
-	if (stack_sorted(*a))
-		return ;
-	max = get_max(*a);
-	if ((*a)->value == max)
-		ra(a, c);
-	else if ((*a)->next->value == max)
-		rra(a, c);
-	if ((*a)->value > (*a)->next->value)
-		sa(a, c);
 }
