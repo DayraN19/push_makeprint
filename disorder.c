@@ -6,42 +6,68 @@
 /*   By: bastiangranier <bastiangranier@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 10:02:17 by bgranier          #+#    #+#             */
-/*   Updated: 2026/02/04 11:00:21 by bastiangran      ###   ########.fr       */
+/*   Updated: 2026/02/05 12:48:44 by bastiangran      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-float	compute_disorder(t_stack_node *a)
+int	compute_disorder_precise(t_stack_node *a)
 {
-	int				bad;
-	int				total;
-	t_stack_node	*tmp;
+	int				mistakes;
+	int				total_pairs;
+	t_stack_node	*i;
+	t_stack_node	*j;
 
-	bad = 0;
-	total = 0;
-	tmp = a;
-	while (tmp && tmp->next)
+	mistakes = 0;
+	total_pairs = 0;
+	i = a;
+	while (i)
 	{
-		if (tmp->index > tmp->next->index)
-			bad++;
-		total++;
-		tmp = tmp->next;
+		j = i->next;
+		while (j)
+		{
+			total_pairs++;
+			if (i->value > j->value)
+				mistakes++;
+			j = j->next;
+		}
+		i = i->next;
 	}
-	if (total == 0)
-		return (0.0f);
-	return ((float)bad / (float)total);
+	if (total_pairs == 0)
+		return (0);
+	return ((mistakes * 10000) / total_pairs);
 }
 
-int	print_disorder(t_stack_node *a)
+void	print_disorder_point(int disorder)
 {
-	double	disorderdouble;
+	int	integer_part;
+	int	fraction_part;
 
-	(int)(disorderdouble);
-	disorderdouble = compute_disorder(a) * 10000;
-	ft_printf("Disorder: %.2f%%\n", disorderdouble / 100);
-	ft_printf(" %d.%d\n",
-		(int)(disorderdouble / 1000), (int)(disorderdouble % 100)
-		);
-	return (0);
+	integer_part = disorder / 100;
+	fraction_part = disorder % 100;
+
+	ft_putstr_fd("Initial disorder: ", 2);
+	ft_putnbr_fd(integer_part, 2);
+	ft_putstr_fd(".", 2);
+	if (fraction_part < 10)
+		ft_putstr_fd("0", 2);
+	ft_putnbr_fd(fraction_part, 2);
+	ft_putstr_fd("%\n", 2);
+}
+
+void	print_disorder_precise(int disorder)
+{
+	int	integer_part;
+	int	fraction_part;
+
+	integer_part = disorder / 100;
+	fraction_part = disorder % 100;
+	ft_putstr_fd("Initial disorder: ", 2);
+	ft_putnbr_fd(integer_part, 2);
+	ft_putstr_fd(".", 2);
+	if (fraction_part < 10)
+		ft_putstr_fd("0", 2);
+	ft_putnbr_fd(fraction_part, 2);
+	ft_putstr_fd("%\n", 2);
 }

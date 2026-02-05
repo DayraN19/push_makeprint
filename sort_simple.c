@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_simple.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bastiangranier <bastiangranier@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 13:24:42 by bgranier          #+#    #+#             */
-/*   Updated: 2026/02/03 10:51:38 by bgranier         ###   ########.fr       */
+/*   Updated: 2026/02/05 12:50:01 by bastiangran      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	sort_simple(t_stack_node **a, t_stack_node **b, t_ctrl *c)
 	else if (size == 3)
 		sort_three(a, c);
 	else
-		sort_five(a, b, c);
+		sort_5(a, b, c);
 	c->size_a = stack_size(*a);
 	c->size_b = stack_size(*b);
 }

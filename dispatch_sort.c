@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   dispatch_sort.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bastiangranier <bastiangranier@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 15:30:00 by bgranier          #+#    #+#             */
-/*   Updated: 2026/01/20 12:53:01 by bgranier         ###   ########.fr       */
+/*   Updated: 2026/02/05 12:51:45 by bastiangran      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	dispatch_sort(t_stack_node **a, t_stack_node **b, t_ctrl *c)
 {
-	c->count_disorder = compute_disorder(*a);
+	c->count_disorder = compute_disorder_precise(*a);
 	if (c->strategy == STRAT_SIMPLE)
 	{
 		c->executed_strategy = STRAT_SIMPLE;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_five.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bastiangranier <bastiangranier@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 10:41:31 by bgranier          #+#    #+#             */
-/*   Updated: 2026/02/03 10:41:44 by bgranier         ###   ########.fr       */
+/*   Updated: 2026/02/05 12:38:44 by bastiangran      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static int	find_min_pos(t_stack_node *a)
 	return (pos);
 }
 
-void	sort_five(t_stack_node **a, t_stack_node **b, t_ctrl *c)
+void	sort_5(t_stack_node **a, t_stack_node **b, t_ctrl *c)
 {
 	int	size;
 	int	pos;

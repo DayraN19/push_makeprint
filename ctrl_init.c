@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ctrl_init.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bastiangranier <bastiangranier@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 14:08:44 by bgranier          #+#    #+#             */
-/*   Updated: 2026/02/03 13:08:48 by bgranier         ###   ########.fr       */
+/*   Updated: 2026/02/05 12:40:22 by bastiangran      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ void	ctrl_init(t_ctrl *c, t_stack_node *a, t_stack_node *b)
 	c->count_sb = 0;
 	c->count_ss = 0;
 	c->executed_strategy = 0;
-	c->count_disorder = compute_disorder(a);
+	c->first = a;
+	c->last = b;
+	c->count_disorder = compute_disorder_precise(c->first);
 	c->size_a = stack_size(a);
 	c->size_b = stack_size(b);
-	c->first = NULL;
-	c->last = NULL;
 }

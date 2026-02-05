@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   strategy.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bastiangranier <bastiangranier@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 13:31:15 by bgranier          #+#    #+#             */
-/*   Updated: 2026/02/03 11:07:21 by bgranier         ###   ########.fr       */
+/*   Updated: 2026/02/05 12:56:43 by bastiangran      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ const char	*strategy_name(int strat)
 const char	*strategy_complexity(int strat)
 {
 	if (strat == STRAT_SIMPLE)
-		return ("O(n)");
+		return ("O(n²)");
 	if (strat == STRAT_MEDIUM)
 		return ("O(n√n)");
 	if (strat == STRAT_COMPLEX)

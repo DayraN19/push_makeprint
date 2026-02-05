@@ -6,7 +6,7 @@
 /*   By: bastiangranier <bastiangranier@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 15:10:08 by bgranier          #+#    #+#             */
-/*   Updated: 2026/02/04 10:57:09 by bastiangran      ###   ########.fr       */
+/*   Updated: 2026/02/05 12:55:07 by bastiangran      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ void			sort_simple(t_stack_node **a, t_stack_node **b, t_ctrl *c);
 void			sort_medium(t_stack_node **a, t_stack_node **b, t_ctrl *c);
 void			sort_complex(t_stack_node **a, t_stack_node **b, t_ctrl *c);
 void			sort_adaptive(t_stack_node **a, t_stack_node **b, t_ctrl *c);
-float			compute_disorder(t_stack_node *a);
+int				compute_disorder_precise(t_stack_node *a);
 void			dispatch_sort(t_stack_node **a, t_stack_node **b, t_ctrl *c);
 void			sort_3(t_stack_node **a, t_ctrl *c);
 void			ctrl_init(t_ctrl *c, t_stack_node *a, t_stack_node *b);
@@ -96,7 +96,7 @@ void			select_strategy(t_ctrl *c, char **av);
 int				handle_bench(t_ctrl *c, int argc, char **argv);
 int				get_position(t_stack_node *stack, t_stack_node *node);
 int				get_chunk_size(int size);
-void			sort_five(t_stack_node **a, t_stack_node **b, t_ctrl *c);
+void			sort_5(t_stack_node **a, t_stack_node **b, t_ctrl *c);
 void			sort_chunks(t_stack_node **a, t_stack_node **b,
 					int chunk, t_ctrl *c);
 void			push_chunks(t_stack_node **a, t_stack_node **b,
@@ -114,4 +114,5 @@ int				count_in_range(t_stack_node *a, int min, int max);
 int				get_max_index_pos(t_stack_node *b);
 void			push_back_to_a(t_stack_node **a, t_stack_node **b);
 int				print_disorder(t_stack_node *a);
+void			print_disorder_point(int disorder);
 #endif
