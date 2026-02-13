@@ -6,7 +6,7 @@
 /*   By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 12:21:31 by bgranier          #+#    #+#             */
-/*   Updated: 2026/01/20 13:28:10 by bgranier         ###   ########.fr       */
+/*   Updated: 2026/02/13 09:53:22 by bgranier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	stack_size(t_stack_node *stack)
 	return (i);
 }
 
-int	is_sorted(t_stack_node *stack)
+/* int	is_sorted(t_stack_node *stack)
 {
 	while (stack && stack->next)
 	{
@@ -34,7 +34,7 @@ int	is_sorted(t_stack_node *stack)
 		stack = stack->next;
 	}
 	return (1);
-}
+} */
 
 void	free_stack(t_stack_node *stack)
 {

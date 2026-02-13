@@ -6,7 +6,7 @@
 /*   By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 13:28:13 by bgranier          #+#    #+#             */
-/*   Updated: 2026/01/20 13:29:55 by bgranier         ###   ########.fr       */
+/*   Updated: 2026/02/13 09:57:44 by bgranier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void	sort_chunks(t_stack_node **a, t_stack_node **b, int chunk, t_ctrl *c)
 	}
 }
 
-int	get_max_bits(t_stack_node *a)
+/* int	get_max_bits(t_stack_node *a)
 {
 	int	max;
 	int	bits;
@@ -79,7 +79,7 @@ int	get_max_bits(t_stack_node *a)
 	while ((max >> bits) != 0)
 		bits++;
 	return (bits);
-}
+} */
 
 void	error_exit(void)
 {

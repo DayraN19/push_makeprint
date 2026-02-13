@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bastiangranier <bastiangranier@student.    +#+  +:+       +#+        */
+/*   By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 15:10:08 by bgranier          #+#    #+#             */
-/*   Updated: 2026/02/05 12:55:07 by bastiangran      ###   ########.fr       */
+/*   Updated: 2026/02/13 09:58:43 by bgranier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,12 +58,13 @@ typedef struct s_ctrl
 t_stack_node	*new_node(int value);
 void			stack_add_back(t_stack_node **stack, t_stack_node *new);
 void			init_stack_a(t_stack_node **a, char **argv);
-void			index_stack(t_stack_node *a);
+/* void			index_stack(t_stack_node *a); */
 
 /* ===== stack utils ===== */
 int				stack_size(t_stack_node *stack);
 int				stack_sorted(t_stack_node *a);
-int				is_sorted(t_stack_node *stack);
+void    		index_stack(t_stack_node **stack);
+int				is_sorted(t_stack_node **stack);
 void			free_stack(t_stack_node *stack);
 void			print_stack(t_stack_node *stack);
 t_stack_node	*get_stack_bottom(t_stack_node *stack);
@@ -80,7 +81,10 @@ void			rra(t_stack_node **a, t_ctrl *c);
 void			rrb(t_stack_node **b, t_ctrl *c);
 void			rrr(t_stack_node **a, t_stack_node **b, t_ctrl *c);
 void			error_exit(void);
-int				get_max_bits(t_stack_node *a);
+/* int				get_max_bits(t_stack_node *a); */
+void			sort_complex(t_stack_node **stack_a, t_stack_node **stack_b, t_ctrl *number_op);
+int				get_max_bits(t_stack_node **stack);
+
 void			move_min_to_top(t_stack_node **a, t_ctrl *c);
 void			sort_nearly_sorted(t_stack_node **a, t_stack_node **b);
 void			sort_simple(t_stack_node **a, t_stack_node **b, t_ctrl *c);
